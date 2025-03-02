@@ -512,38 +512,6 @@ footer .contact a i {
     font-size: 1.2rem;
 }
 
-#back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background-color: #842ebd; 
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-    opacity: 0;
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-}
-
-#back-to-top:hover {
-    background-color: #630c8b;
-}
-
-#back-to-top svg {
-    fill: #fff;
-    width: 24px;
-    height: 24px;
-}
-
-#back-to-top.visible {
-    opacity: 1;
-}
-
 @keyframes fade-in {
     to {
         opacity: 1;
