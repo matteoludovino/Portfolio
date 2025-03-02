@@ -45,24 +45,6 @@ nav a.active {
     border-bottom: 3px solid #630c8b
 }
 
-/* @font-face {
-    font-family: 'The Sans Mono Condensed';
-    src: url('fonts/TheSansMonoCondensed.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-} */
-
-/* .logo {
-    font-size: 1.9rem;
-    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
-    background-clip: text;
-    cursor: pointer;
-    color: transparent;
-    font-family: 'The Sans Mono Condensed', monospace;
-    padding-right: 8rem;
-} */
-
-
 #person {
     height: 67vh;
     width: 100%;
@@ -550,4 +532,142 @@ footer .contact a i {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+/* Estilos base */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+header {
+    position: relative;
+    height: 5rem;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 10%;
+}
+
+nav a {
+    font-size: 0.95rem;
+    color: #fff;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.1s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
+    background-clip: text; 
+    color: transparent;
+    border-bottom: 3px solid #630c8b;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 1rem 5%;
+    }
+
+    nav a {
+        margin-left: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .person-content div h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .wrapper-projects {
+        grid-template-columns: 1fr;
+        gap: 10rem;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .project-card {
+        margin-bottom: 50px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill-card {
+        width: 80%;
+        height: auto;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    footer div {
+        max-width: 100%;
+    }
+
+    .contact-buttons {
+        width: 100%;
+    }
+
+    .contact-button {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .person-content div h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .person-description p {
+        font-size: 0.75rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .glow-on-hover {
+        width: 100%;
+    }
+
+    .projects-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .skills-title h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        padding: 20px 5px;
+    }
+
+    footer a {
+        font-size: 0.75rem; 
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-button {
+        width: 100%;
+    }
 }
