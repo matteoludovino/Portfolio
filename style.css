@@ -345,9 +345,11 @@ nav a.active {
     height: auto;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
 .project-image img:hover {
+    transform: scale(1.01);
     filter: drop-shadow(0 4px 8px #8a2be280);
 }
 
@@ -379,8 +381,8 @@ nav a.active {
 }
 
 .techs ul li svg {
-    width: 25px;
-    height: 25px;
+    width: 21px;
+    height: 21px;
     transition: transform 0.3s ease;
 }
 
