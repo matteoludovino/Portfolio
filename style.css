@@ -15,6 +15,7 @@ html {
 body {
     font-family: 'Poppins', sans-serif;
     background: #000;
+    color: #fff;
     text-align: center;
 }
 
@@ -44,6 +45,20 @@ nav a.active {
     color: transparent;
     border-bottom: 3px solid #630c8b
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #7600adcc;
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
 
 #person {
     height: 67vh;
@@ -176,9 +191,36 @@ nav a.active {
     border-radius: 20px;
 }
 
+.scroll-down-link {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.scroll-down-link:hover {
+    color: #9f19d4cc;
+}
+
+.scroll-down-link i {
+    animation: scrollDownAnimation 1s infinite alternate;
+}
+
+@keyframes scrollDownAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(8px);
+    }
+}
+
 .projects-title {
     margin-bottom: 40px;
-    margin-top: 20rem ;
+    margin-top: 25rem ;
 }
 
 .projects-title h1 {
@@ -212,7 +254,7 @@ nav a.active {
 }
 
 .project-image img:hover {
-    filter: drop-shadow(0 4px 8px rgba(138, 43, 226, 0.5));
+    filter: drop-shadow(0 4px 8px #8a2be280);
 }
 
 .project-card span {
@@ -659,15 +701,4 @@ nav a.active {
         font-size: 0.75rem; 
     }
 
-    .about-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .contact-text h1 {
-        font-size: 1.5rem;
-    }
-
-    .contact-button {
-        width: 100%;
-    }
 }
