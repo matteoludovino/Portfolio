@@ -19,6 +19,106 @@ body {
     text-align: center;
 }
 
+:root {
+    --svg-light: #000; 
+    --svg-dark: #fff;
+}
+
+.light-theme {
+    background-color: #fdfdfd;
+    color: #000;
+}
+
+.light-theme header nav a,
+.light-theme .person-content h1:nth-last-child(2),
+.light-theme .person-content p {
+    color: #000;
+}
+
+.light-theme .glow-on-hover,
+.light-theme .glow-on-hover:after {
+    background: #e5e4e5;
+    color: #000; 
+}
+
+.light-theme .svg-icon {
+    fill: var(--svg-light);
+}
+
+.light-theme .scroll-down-link {
+    color: #000;
+}
+
+.light-theme .projects-title h1,  
+.light-theme .project-card span {
+    color: #000;
+}
+
+.light-theme .project-card p {
+    color: #696969
+}
+
+.light-theme #skills {
+    background: #fdfdfd;
+    color: #000;
+}
+
+.light-theme .skill-card h2 {
+    color: #000;
+}
+
+.light-theme #about {
+    background: #fdfdfd;
+    color: #000;
+}
+
+.light-theme .about-content h2,
+.light-theme #contact {
+    color: #000;
+}
+
+.light-theme .contact-text p {
+    color: #696969;
+}
+
+.light-theme .contact-button {
+    background: #fff;
+    color: #000;
+}
+
+.light-theme footer {
+    background: #e5e4e5;
+}
+
+.light-theme footer h3, 
+.light-theme footer a {
+    color: #000;
+}
+
+.light-theme footer .contact a {
+    color: #000;
+}
+
+.light-theme .toggle-theme-btn {
+    color: #000;
+}
+
+.toggle-theme-btn {
+    position: fixed;
+    top: 25px; 
+    right: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+    z-index: 999;
+}
+
+.toggle-theme-btn:hover {
+    color: #7600adcc;
+}
+
 header {
     position: relative;
     height: 5rem;
@@ -190,6 +290,10 @@ nav a.active {
     border-radius: 20px;
 }
 
+.svg-icon {
+    fill: var(--svg-dark)
+}
+
 .scroll-down-link {
     position: absolute;
     bottom: 20px;
@@ -206,15 +310,6 @@ nav a.active {
 
 .scroll-down-link i {
     animation: scrollDownAnimation 1s infinite alternate;
-}
-
-@keyframes scrollDownAnimation {
-    from {
-        transform: translateY(0);
-    }
-    to {
-        transform: translateY(8px);
-    }
 }
 
 .projects-title {
@@ -573,6 +668,15 @@ footer .contact a i {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
     100% { background-position: 0 0; }
+}
+
+@keyframes scrollDownAnimation {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(8px);
+    }
 }
 
 @media only screen and (max-width: 768px) {
