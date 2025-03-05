@@ -59,7 +59,6 @@ nav a.active {
     background: #111;
 }
 
-
 #person {
     height: 67vh;
     width: 100%;
@@ -202,7 +201,7 @@ nav a.active {
 }
 
 .scroll-down-link:hover {
-    color: #9f19d4cc;
+    color: #7600adcc;
 }
 
 .scroll-down-link i {
