@@ -120,14 +120,15 @@ body {
 }
 
 header {
-    position: relative;
-    height: 5rem;
-    width: 100%;
-    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    background: #000;
+    height: 5rem;
+    width: 100%;
     padding: 1rem 10%;
+    z-index: 1000;
 }
 
 nav a {
