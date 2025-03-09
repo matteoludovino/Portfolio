@@ -29,6 +29,19 @@ body {
     color: #000;
 }
 
+.light-theme header {
+    background: #fdfdfd;
+    color: #000;
+}
+
+.light-theme header nav a:hover,
+.light-theme header nav a.active {
+    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
+    background-clip: text;
+    color: transparent;
+    border-bottom: 3px solid #630c8b;
+}
+
 .light-theme header nav a,
 .light-theme .person-content h1:nth-last-child(2),
 .light-theme .person-content p {
@@ -128,7 +141,7 @@ header {
     height: 5rem;
     width: 100%;
     padding: 1rem 10%;
-    z-index: 1000;
+    z-index: 30;
 }
 
 nav a {
