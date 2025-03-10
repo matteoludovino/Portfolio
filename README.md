@@ -5,7 +5,7 @@ It's a web project to showcase my knowledge and other projects I've done.
 <br>
 <br>
 ### ▸ How to acess?
-U can just go to project's website: <a href="https://portfolio-matteoludovino.vercel.app/">Click here!</a>
+You can just go to project's website: <a href="https://portfolio-matteoludovino.vercel.app/">Click here!</a>
 <br>
 <br>
 ### ▸ Project Techs:
