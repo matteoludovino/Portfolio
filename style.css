@@ -34,8 +34,8 @@ body {
     color: #000;
 }
 
-.light-theme header nav a:hover,
-.light-theme header nav a.active {
+.light-theme .nav-item a:hover,
+.light-theme .nav-item a.active {
     background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
     background-clip: text;
     color: transparent;
@@ -46,6 +46,26 @@ body {
 .light-theme .person-content h1:nth-last-child(2),
 .light-theme .person-content p {
     color: #000;
+}
+
+.light-theme .menu .bar {
+    background-color: #000;
+}
+
+.light-theme .nav-menu {
+    background: #fdfdfd; 
+}
+
+.light-theme .nav-item a {
+    color: #000;
+}
+
+.light-theme .nav-item a:hover,
+.light-theme .nav-item a.active {
+    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
+    background-clip: text;
+    color: transparent;
+    border-bottom: 3px solid #630c8b;
 }
 
 .light-theme .glow-on-hover,
@@ -144,21 +164,55 @@ header {
     z-index: 30;
 }
 
-nav a {
-    font-size: 0.95rem;
-    color: #fff;
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: 0.1s ease;
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10% 0;
 }
 
-nav a:hover,
-nav a.active {
-    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
-    background-clip: text; 
-    color: transparent;
-    border-bottom: 3px solid #630c8b
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
+
+.nav-item {
+    margin-left: 2rem;
+}
+
+.nav-item a {
+    font-size: 0.95rem;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.1s ease;
+    text-decoration: none;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+    background-image: radial-gradient(circle, #842ebd, #910fce, #650c8b);
+    background-clip: text;
+    color: transparent;
+    border-bottom: 3px solid #630c8b;
+}
+
+.menu {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -686,7 +740,8 @@ footer .contact a i {
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 785px) {
+    
     header {
         padding: 1rem 5%;
     }
@@ -696,11 +751,75 @@ footer .contact a i {
         font-size: 0.85rem;
     }
 
+    .navigation {
+        padding: 18px 20px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+    }
+    
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .menu {
+         display: flex;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        right: -100%;
+        top: 80px;
+        width: 100%;
+        height: calc(100vh - 80px);
+        flex-direction: column;
+        background: #000;
+        gap: 1rem;
+        transition: right 0.3s ease;
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .nav-menu.ativo {
+        right: 0; 
+    }
+    
+    .nav-item {
+        margin: 16px 0;
+    }
+    
+    .menu.ativo .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu.ativo .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .toggle-theme-btn {
+        top: 34px; 
+    }
     .person-content div h1 {
-        font-size: 3rem;
+        font-size: 2.7rem;
         line-height: 3rem;
     }
 
+    .person-description p {
+        font-size: 0.9rem;
+        width: 80%;
+    }
+    
     .wrapper-projects {
         grid-template-columns: 1fr;
         gap: 10rem;
@@ -722,6 +841,10 @@ footer .contact a i {
         height: auto;
     }
 
+    .about-content {
+        width: 80%;
+    }
+
     footer {
         flex-direction: column;
         align-items: center;
@@ -739,41 +862,4 @@ footer .contact a i {
     .contact-button {
         width: 90%;
     }
-}
-
-@media only screen and (max-width: 480px) {
-    .person-content div h1 {
-        font-size: 2rem;
-        line-height: 2rem;
-    }
-
-    .person-description p {
-        font-size: 0.75rem;
-    }
-
-    .button-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .glow-on-hover {
-        width: 100%;
-    }
-
-    .projects-title h1 {
-        font-size: 1.5rem;
-    }
-
-    .skills-title h1 {
-        font-size: 1.5rem;
-    }
-
-    footer {
-        padding: 20px 5px;
-    }
-
-    footer a {
-        font-size: 0.75rem; 
-    }
-
 }

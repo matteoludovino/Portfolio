@@ -1,5 +1,7 @@
 const toggleThemeBtn = document.getElementById('toggle-theme-btn');
 const body = document.body;
+const menu = document.querySelector('.menu');
+const NavMenu = document.querySelector('.nav-menu');
 
 const storedTheme = localStorage.getItem('theme');
 if (storedTheme) {
@@ -17,3 +19,8 @@ toggleThemeBtn.addEventListener('click', () => {
         localStorage.setItem('theme', 'dark-theme');
     }
 });
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('ativo');
+    NavMenu.classList.toggle('ativo');
+})
