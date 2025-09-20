@@ -20,7 +20,7 @@ body {
 }
 
 :root {
-    --svg-light: #000; 
+    --svg-light: #000;
     --svg-dark: #fff;
 }
 
@@ -53,7 +53,7 @@ body {
 }
 
 .light-theme .nav-menu {
-    background: #fdfdfd; 
+    background: #fdfdfd;
 }
 
 .light-theme .nav-item a {
@@ -71,7 +71,7 @@ body {
 .light-theme .glow-on-hover,
 .light-theme .glow-on-hover:after {
     background: #e5e4e5;
-    color: #000; 
+    color: #000;
 }
 
 .light-theme .svg-icon {
@@ -82,7 +82,7 @@ body {
     color: #000;
 }
 
-.light-theme .projects-title h1,  
+.light-theme .projects-title h1,
 .light-theme .project-card span {
     color: #000;
 }
@@ -123,7 +123,7 @@ body {
     background: #e5e4e5;
 }
 
-.light-theme footer h3, 
+.light-theme footer h3,
 .light-theme footer a {
     color: #000;
 }
@@ -138,7 +138,7 @@ body {
 
 .toggle-theme-btn {
     position: fixed;
-    top: 25px; 
+    top: 25px;
     right: 30px;
     background: transparent;
     border: none;
@@ -220,7 +220,7 @@ header {
 
 ::-webkit-scrollbar-thumb {
     background-color: #7600adcc;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -260,16 +260,16 @@ header {
 }
 
 .person-content div h1:nth-child(1) {
-    animation: 
-        typewriter 1.3s steps(40) forwards, 
+    animation:
+        typewriter 1.3s steps(40) forwards,
         blink-cursor 0.80s steps(2) infinite 0s,
-        hide-cursor 0.1s forwards 1.3s; 
-        color: #fff;
+        hide-cursor 0.1s forwards 1.3s;
+    color: #fff;
 }
 
 .person-content div h1:nth-child(2) {
     opacity: 0;
-    animation: 
+    animation:
         fade-in 0.1s forwards 1.3s,
         typewriter 1.3s steps(40) forwards 1.3s,
         blink-cursor 0.80s steps(1) infinite 0s;
@@ -282,7 +282,7 @@ header {
 }
 
 .person-description p {
-    color: #fff; 
+    color: #fff;
     font-size: 0.88rem;
     line-height: 1.5rem;
     max-width: 600px;
@@ -313,12 +313,12 @@ header {
     position: relative;
     z-index: 0;
     border-radius: 20px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    gap: 10px; 
-    text-decoration: none; 
-    transition: transform 0.3s ease, opacity 0.3s ease-in-out; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease-in-out;
 }
 
 .glow-on-hover:before {
@@ -326,7 +326,7 @@ header {
     background: linear-gradient(45deg, #8a2be2, #9932cc, #bc4cd8, #9a19d6, #c446d4, #a11aa1, #9400d3, #4b0082, #8a2be2);
     position: absolute;
     top: -2px;
-    left: -2px; 
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -382,7 +382,7 @@ header {
 
 .projects-title {
     margin-bottom: 40px;
-    margin-top: 25rem ;
+    margin-top: 25rem;
 }
 
 .projects-title h1 {
@@ -405,11 +405,11 @@ header {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 100px; 
+    margin-bottom: 100px;
 }
 
 .project-image img {
-    width: 100%; 
+    width: 100%;
     height: auto;
     border-radius: 10px;
     cursor: pointer;
@@ -432,6 +432,76 @@ header {
     font-size: 0.8rem;
     color: #636363;
     margin-bottom: 20px;
+}
+
+.carrossel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.project-card {
+    flex: 0 0 calc(50% - 40px);
+    margin: 0 20px;
+    box-sizing: border-box;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(118, 0, 173, 0.8);
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+.carrossel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #636363;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active {
+    background-color: #7600ad;
 }
 
 .techs {
@@ -605,13 +675,13 @@ footer .contact svg {
     font-size: 0.875rem;
     display: flex;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 20px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .contact-button span {
-    flex: 1; 
+    flex: 1;
     text-align: center;
 }
 
@@ -705,15 +775,19 @@ footer .contact a i {
     from {
         width: 0;
     }
+
     to {
         width: 100%;
     }
 }
 
 @keyframes blink-cursor {
-    from, to {
+
+    from,
+    to {
         border-right-color: transparent;
     }
+
     50% {
         border-right-color: #7b06aa;
     }
@@ -721,27 +795,36 @@ footer .contact a i {
 
 @keyframes hide-cursor {
     to {
-        border-right-color: transparent; 
+        border-right-color: transparent;
     }
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 @keyframes scrollDownAnimation {
     from {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(8px);
     }
 }
 
 @media only screen and (max-width: 785px) {
-    
+
     header {
         padding: 1rem 5%;
     }
@@ -764,15 +847,15 @@ footer .contact a i {
         align-items: center;
         gap: 5rem;
     }
-    
+
     .navbar {
         justify-content: space-between;
     }
 
     .menu {
-         display: flex;
+        display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         right: -100%;
@@ -786,30 +869,31 @@ footer .contact a i {
         text-align: center;
         padding-top: 20px;
     }
-    
+
     .nav-menu.ativo {
-        right: 0; 
+        right: 0;
     }
-    
+
     .nav-item {
         margin: 16px 0;
     }
-    
+
     .menu.ativo .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
-    
+
     .menu.ativo .bar:nth-child(2) {
         opacity: 0;
     }
-    
+
     .menu.ativo .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
 
     .toggle-theme-btn {
-        top: 34px; 
+        top: 34px;
     }
+
     .person-content div h1 {
         font-size: 2.7rem;
         line-height: 3rem;
@@ -819,7 +903,7 @@ footer .contact a i {
         font-size: 0.9rem;
         width: 80%;
     }
-    
+
     .wrapper-projects {
         grid-template-columns: 1fr;
         gap: 10rem;
@@ -829,6 +913,12 @@ footer .contact a i {
 
     .project-card {
         margin-bottom: 50px;
+    }
+
+    .carrossel-btn {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
     }
 
     .skills-container {
